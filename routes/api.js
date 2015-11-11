@@ -31,14 +31,10 @@ api.delete('/students/:id', function(req,res) {
 	res.json(data.students);
 })
 
-//MAKE A PUT REQUEST HANDLER FOR A SPECIFIC STUDENT, TO UPDATE THEIR INFO TO SOMETHING NEW
 api.put('/students/:id', function(req,res){
 	//data.students.splice(req.params.id,1, {name: "New Name", email: "newemail@gmail.com" });
-
 	data.students[req.params.id].name = "New Name";
 	data.students[req.params.id].email = "newemail@gmail.com";
-
-
 	res.json(data.students)
 })
 
